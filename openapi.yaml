@@ -1,0 +1,47 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: '0.1'
+servers:
+  - url: 'https://jsonplaceholder.typicode.com'
+paths:
+  /posts/105:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '404':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'https://jsonplaceholder.typicode.com'
+    servers:
+      - url: 'https://jsonplaceholder.typicode.com'
+  /posts:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://jsonplaceholder.typicode.com'
+    post:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '201':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+            #   examples: {
+            #     "id": 101
+            #   }
+      servers:
+        - url: 'https://jsonplaceholder.typicode.com'
+    servers:
+      - url: 'https://jsonplaceholder.typicode.com'
