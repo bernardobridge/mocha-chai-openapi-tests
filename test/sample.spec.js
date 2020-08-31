@@ -18,14 +18,24 @@ describe('JSON-Placeholder API Tests', () => {
         bearerToken = 'test';
     })
 
-    describe('POST /posts endpoint', () => {
+    describe('/posts endpoint', () => {
         it('should return 201 when post with no body', async () => {
             const response = await api
                 .post('/posts')
                 .set('Authorization', `Bearer ${bearerToken}`)
 
             expect(response.statusCode).to.equal(201);
-            expect(response).to.satisfyApiSpec
+            expect(response).to.satisfyApiSpec;
+        })
+
+        it('should return a 404 when you GET and no posts are available', async () => {
+            const idOfNonExistentItem = 105;
+            const response = await api
+                .get(`/posts/${idOfNonExistentItem}`)
+                .set('Authorization', `Bearer ${bearerToken}`)
+            
+            expect(response.statusCode).to.equal(404);
+            expect(response).to.satisfyApiSpec;
         })
     })
 })
